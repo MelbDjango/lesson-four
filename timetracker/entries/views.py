@@ -31,7 +31,7 @@ def entries(request):
             entry.description = entry_form.cleaned_data['description']
             entry.save()
     else:
-        entry_form = EntryForm(request.POST)
+        entry_form = EntryForm()
 
     entry_list = Entry.objects.all()
     return render(request, 'entries.html', {
