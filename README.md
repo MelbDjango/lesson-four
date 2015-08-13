@@ -8,7 +8,9 @@
 
 
 Congratulations, you've made it to the git repository for our fourth lesson. Hopefully you also made it to the class
-and some of this makes sense to you.
+and some of this makes sense to you. The slides from the class are available in this repository and online here:
+
+https://melbdjango.github.io/lesson-four/
 
 Check our RESOURCES.md for some links we think you'll find handy.
 
