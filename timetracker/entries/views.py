@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 
 from .forms import EntryForm
 from .models import Client, Entry, Project
@@ -26,10 +26,11 @@ def entries(request):
             # If the form is valid, let's create and Entry with the submitted data
             entry = Entry()
             entry.start = entry_form.cleaned_data['start']
-            entry.end = entry_form.cleaned_data['end']
+            entry.stop = entry_form.cleaned_data['stop']
             entry.project = entry_form.cleaned_data['project']
             entry.description = entry_form.cleaned_data['description']
             entry.save()
+            return redirect('entry-list')
     else:
         entry_form = EntryForm()
 
