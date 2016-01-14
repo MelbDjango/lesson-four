@@ -12,7 +12,8 @@ def django_example(request):
         if form.is_valid():
             return render(request, 'django_form.html', {
                 'form': form,
-                'name': form.cleaned_data['name']
+                'name': form.cleaned_data['name'],
+                'is_awesome': form.cleaned_data['awesome'],
             })
     else:
         form = HelloWorldForm()

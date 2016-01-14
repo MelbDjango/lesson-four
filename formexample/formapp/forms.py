@@ -2,8 +2,8 @@ from django import forms
 
 
 class HelloWorldForm(forms.Form):
-    name = forms.CharField(required=False, label="Say Hello")
-    awesome = forms.BooleanField(label="Are they awesome?")
+    name = forms.CharField(label="Say Hello")
+    awesome = forms.BooleanField(label="Are they awesome?", required=False)
 
     def clean_name(self):
         name = self.cleaned_data['name']
